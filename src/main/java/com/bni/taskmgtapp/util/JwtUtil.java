@@ -28,7 +28,7 @@ public class JwtUtil {
             .setSubject(username)
             .signWith(SIGNING_KEY)
             .compact();
-    };
+    }
 
     public String validateToken(String token) {
         try {
@@ -41,6 +41,6 @@ public class JwtUtil {
         } catch (Exception e) {
             return null; // Token is invalid
         }
-    };
+    }
         
 }
