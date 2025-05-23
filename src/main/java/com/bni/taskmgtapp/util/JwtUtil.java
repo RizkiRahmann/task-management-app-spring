@@ -18,7 +18,7 @@ public class JwtUtil {
     );
 
     /**
-     * Creates a JWT token for the given username.1
+     * Creates a JWT token for the given username.
      * The token is signed with the specified signing key.
      * @param username
      * @return
