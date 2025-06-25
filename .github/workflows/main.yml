@@ -21,17 +21,6 @@ jobs:
             
             # Membuat keyboard custom
             curl -X POST "https://api.telegram.org/bot7960361581:AAF5nYh_ETdtdMl_hQAA9v2SRFMvPN2S1dY/sendMessage" \
-              -H "Content-Type: application/json" \
-              -d '{
-                  "chat_id": 1243717571,
-                  "text": "Quick Actions:",
-                  "reply_markup": {
-                      "keyboard": [
-                          ["🔍 Check Status", "📊 View Metrics"],
-                          ["🚀 Deploy", "🔄 Rollback"],
-                          ["📋 Logs", "⚙️ Settings"]
-                      ],
-                      "resize_keyboard": true,
-                "one_time_keyboard": true
-                }
-            }'
+                -d chat_id=1243717571 \
+                -d text="Quick Actions:" \
+                -d reply_markup='{"keyboard":[["🔍 Status","📊 Metrics"],["🚀 Deploy","🔄 Rollback"]],"resize_keyboard":true,"one_time_keyboard":true}'
